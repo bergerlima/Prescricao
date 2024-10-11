@@ -1,0 +1,17 @@
+header{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    line-height: 2em;
+    gap: 10px;
+    width: 80%;
+}
+
+.titulo{
+    text-align: center;
+}
