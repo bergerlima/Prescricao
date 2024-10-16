@@ -1,17 +1,50 @@
-header{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
+.form-container{
+    width: 90%;
+    margin: auto;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    line-height: 2em;
-    gap: 10px;
-    width: 80%;
-}
-
-.titulo{
+.form-header{
     text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-section{
+    max-width: 1024px;
+}
+
+.form-section .dados_paciente{
+    display: block;
+    margin-bottom: 5px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.form-section h3{
+    margin-bottom: 10px;
+}
+
+.form-section label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-section input[type="text"],
+.form-section input[type="date"],
+.form-section input[type="number"],
+.form-section select{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.form-section input[type="checkbox"]{
+    margin-right: 10px;
+}
+
+.form-footer{
+    text-align: right;
+}
+
+.form-footer button{
+    padding: 5px;
 }

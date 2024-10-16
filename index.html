@@ -1,144 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prescrição</title>
 
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <img src="./logo-hollywood.jpg" class="logo">
-    </header>
+    <div class="form-container">
+        <header class="form-header">
+            <h1><img src="./logo-hollywood.jpg" class="logo" alt="logo-hollywood"></h1>
+            <h2 class="title">PEDIDO DE EXAMES</h2>
+        </header>
 
-    <main>
-        <h1 class="titulo">PEDIDO DE EXAMES</h1>
+        <main class="form-section">
+            <section class="form-section dados_paciente">
+                <label for="nome_paciente">PACIENTE</label>
+                <input type="text" name="nome_paciente" id="nome_paciente">
 
-        <section class="dados_paciente">
-            <label for="nome_paciente">PACIENTE</label>
-            <input type="text" name="nome_paciente" id="nome_paciente">
+                <label for="numero_prontuario">Nº DE PRONTUÁRIO</label>
+                <input type="number" name="numero_prontuario" id="numero_prontuario">
 
-            <label for="numero_prontuario">Nº DE PRONTUÁRIO</label>
-            <input type="number" name="numero_prontuario" id="numero_prontuario">
+                <label for="data_nasc">DATA DE NASCIMENTO</label>
+                <input type="date" name="data_nasc" id="data_nasc">
 
-            <label for="data_nasc">DATA DE NASCIMENTO</label>
-            <input type="date" name="data_nasc" id="data_nasc">
+                <label for="sexo">SEXO</label>
+                <select name="sexo" id="sexo">
+                    <option disabled selected>selecione...</option>
+                    <option value="feminino">FEMININO</option>
+                    <option value="masculino">MASCULINO</option>
+                </select>
 
-            <label for="convenio">CONVÊNIO</label>
-            <input type="text" name="convenio" id="convenio">
+                <label for="convenio">CONVÊNIO</label>
+                <input type="text" name="convenio" id="convenio">
 
-            <label for="medico">MÉDICO</label>
-            <input type="text" name="medico" id="medico" value="Dr Fulano Ciclano" disabled>
-        </section>
+                <label for="medico">MÉDICO</label>
+                <input type="text" name="medico" id="medico" value="Dr Fulano Ciclano" disabled>
+                
+                <label for="data_coleta">PARA SER COLHIDO EM</label>
+                <input type="date" name="data_coleta" id="data_coleta">
+            </section>
 
-        <section class="info_coleta">
-            <label for="data_coleta">PARA SER COLHIDO EM</label>
-            <input type="date" name="data_coleta" id="data_coleta">
-        </section>
+            <section class="form-section bioquimica">
+                <h3>Bioquímica</h3>
 
-        <section class="bioquimica">
-            <label for="acido_urico">ÁCIDO ÚRICO</label>
-            <input type="checkbox" name="acido_urico" id="acido_urico">
+                <label for="acido_urico"><input type="checkbox" name="acido_urico" value="acido_urico">ÁCIDO
+                    ÚRICO</label>
 
-            <label for="bilirrubina">BILIRRUBINA</label>
-            <input type="checkbox" name="bilirrubina" id="bilirrubina">
+                <label for="bilirrubina"><input type="checkbox" name="bilirrubina"
+                        value="bilirrubina">BILIRRUBINA</label>
 
-            <label for="calcio">CÁLCIO</label>
-            <input type="checkbox" name="calcio" id="calcio">
+                <label for="calcio"><input type="checkbox" name="calcio" value="calcio">CÁLCIO</label>
 
-            <label for="ureia">UREIA</label>
-            <input type="checkbox" name="ureia" id="ureia">
 
-            <label for="creatinina">CREATININA</label>
-            <input type="checkbox" name="creatinina" id="creatinina">
+                <label for="ureia"><input type="checkbox" name="ureia" value="ureia">UREIA</label>
 
-            <label for="proteinograma">PROTEINOGRAMA</label>
-            <input type="checkbox" name="proteinograma" id="proteinograma">
+                <label for="creatinina"><input type="checkbox" name="creatinina" value="creatinina">CREATININA</label>
 
-            <label for="albumina">ALBUMINA</label>
-            <input type="checkbox" name="albumina" id="albumina">
+                <label for="proteinograma"><input type="checkbox" name="proteinograma"
+                        value="proteinograma">PROTEINOGRAMA</label>
 
-            <label for="proteinas">PROTEÍNAS TOTAIS E FRAÇÕES</label>
-            <input type="checkbox" name="proteinas" id="proteinas">
+                <label for="albumina"><input type="checkbox" name="albumina" value="albumina">ALBUMINA</label>
 
-            <label for="tgo">TGO</label>
-            <input type="checkbox" name="tgo" id="tgo">
+                <label for="proteinas"><input type="checkbox" name="proteinas" value="proteinas">PROTEÍNAS TOTAIS E
+                    FRAÇÕES</label>
 
-            <label for="tgp">TGP</label>
-            <input type="checkbox" name="tgp" id="tgp">
+                <label for="tgo"><input type="checkbox" name="tgo" value="tgo">TGO</label>
 
-            <label for="gama_gt">GAMA GT</label>
-            <input type="checkbox" name="gama_gt" id="gama_gt">
+                <label for="tgp"><input type="checkbox" name="tgp" value="tgp">TGP</label>
 
-            <label for="fosf_alcalina">FOSFATASE ALCALINA</label>
-            <input type="checkbox" name="fosf_alcalina" id="fosf_alcalina">
+                <label for="gama_gt"><input type="checkbox" name="gama_gt" value="gama_gt">GAMA GT</label>
 
-            <label for="fosf_acida">FOSFATASE ÁCIDA</label>
-            <input type="checkbox" name="fosf_acida" id="fosf_acida">
+                <label for="fosf_alcalina"><input type="checkbox" name="fosf_alcalina" value="fosf_alcalina">FOSFATASE
+                    ALCALINA</label>
 
-            <label for="fosf_prostatica">FOSFATASE PROSTÁTICA</label>
-            <input type="checkbox" name="fosf_prostatica" id="fosf_prostatica">
+                <label for="fosf_acida"><input type="checkbox" name="fosf_acida" value="fosf_acida">FOSFATASE
+                    ÁCIDA</label>
 
-            <label for="dhl">DHL</label>
-            <input type="checkbox" name="dhl" id="dhl">
+                <label for="fosf_prostatica"><input type="checkbox" name="fosf_prostatica"
+                        value="fosf_prostatica">FOSFATASE PROSTÁTICA</label>
 
-            <label for="cpk">CPK</label>
-            <input type="checkbox" name="cpk" id="cpk">
+                <label for="dhl"><input type="checkbox" name="dhl" value="dhl">DHL</label>
 
-            <label for="ckmb">CKMB</label>
-            <input type="checkbox" name="ckmb" id="ckmb">
+                <label for="cpk"><input type="checkbox" name="cpk" value="cpk">CPK</label>
 
-            <label for="">COLESTEROL</label>
+                <label for="ckmb"><input type="checkbox" name="ckmb" value="ckmb">CKMB</label>
 
-            <label for="hdl">HDL</label>
-            <input type="checkbox" name="hdl" id="hdl">
+                <label for="">COLESTEROL</label>
+                <label for="hdl"><input type="checkbox" name="hdl" value="hdl">HDL</label>
 
-            <label for="ldl">LDL</label>
-            <input type="checkbox" name="ldl" id="ldl">
+                <label for="ldl"><input type="checkbox" name="ldl" value="ldl">LDL</label>
 
-            <label for="vldl">VLDL</label>
-            <input type="checkbox" name="vldl" id="vldl">
+                <label for="vldl"><input type="checkbox" name="vldl" value="vldl">VLDL</label>
 
-            <label for="glicemia">GLICEMIA</label>
-            <input type="checkbox" name="glicemia" id="glicemia">
+                <label for="glicemia"><input type="checkbox" name="glicemia" value="glicemia">GLICEMIA</label>
 
-            <label for="hb_glicosilada">HB-GLICOSILADA</label>
-            <input type="checkbox" name="hb_glicosilada" id="hb_glicosilada">
+                <label for="hb_glicosilada"><input type="checkbox" name="hb_glicosilada"
+                        value="hb_glicosilada">HB-GLICOSILADA</label>
 
-            <label for="magnesio">MAGNÉSIO</label>
-            <input type="checkbox" name="magnesio" id="magnesio">
+                <label for="magnesio"><input type="checkbox" name="magnesio" value="magnesio">MAGNÉSIO</label>
 
-            <label for="sodio">SÓDIO</label>
-            <input type="checkbox" name="sodio" id="sodio">
+                <label for="sodio"><input type="checkbox" name="sodio" value="sodio">SÓDIO</label>
 
-            <label for="triglicerides">TRIGLICÉRIDES</label>
-            <input type="checkbox" name="triglicerides" id="triglicerides">
+                <label for="triglicerides"><input type="checkbox" name="triglicerides"
+                        value="triglicerides">TRIGLICÉRIDES</label>
 
-            <label for="lipides_totais">LÍPIDES TOTAIS</label>
-            <input type="checkbox" name="lipides_totais" id="lipides_totais">
+                <label for="lipides_totais"><input type="checkbox" name="lipides_totais" value="lipides_totais">LÍPIDES
+                    TOTAIS</label>
 
-            <label for="lipidograma">LIPIDOGRAMA</label>
-            <input type="checkbox" name="lipidograma" id="lipidograma">
+                <label for="lipidograma"><input type="checkbox" name="lipidograma"
+                        value="lipidograma">LIPIDOGRAMA</label>
 
-            <label for="mucoproteinas">MUCOPROTEÍNAS</label>
-            <input type="checkbox" name="mucoproteinas" id="mucoproteinas">
+                <label for="mucoproteinas"><input type="checkbox" name="mucoproteinas"
+                        value="mucoproteinas">MUCOPROTEÍNAS</label>
 
-            <label for="amilase">AMILASE</label>
-            <input type="checkbox" name="amilase" id="amilase">
+                <label for="amilase"><input type="checkbox" name="amilase" value="amilase">AMILASE</label>
 
-            <label for="lipase">LIPASE</label>
-            <input type="checkbox" name="lipase" id="lipase">
+                <label for="lipase"><input type="checkbox" name="lipase" value="lipase">LIPASE</label>
 
-            <label for="fosforo">FÓSFORO</label>
-            <input type="checkbox" name="fosforo" id="fosforo">
+                <label for="fosforo"><input type="checkbox" name="fosforo" value="fosforo">FÓSFORO</label>
 
-            <label for="postassio">POTÁSSIO</label>
-            <input type="checkbox" name="postassio" id="postassio">
+                <label for="postassio"><input type="checkbox" name="postassio" value="postassio">POTÁSSIO</label>
 
-            <label for="psa">PSA</label>
-            <input type="checkbox" name="psa" id="psa">
-        </section>
-    </main>
+                <label for="psa"><input type="checkbox" name="psa" value="psa">PSA</label>
+            </section>
+            <div class="form-footer">
+                <button type="submit">Gerar pedido</button>
+            </div>
+        </main>
+    </div>
 </body>
+
 </html>
