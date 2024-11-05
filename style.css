@@ -1,6 +1,14 @@
-.form-container{
-    width: 90%;
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 80vw;
+    max-width: 1024px;
     margin: auto;
+
+    font-family: sans-serif;
 }
 
 .form-header{
@@ -8,15 +16,27 @@
     margin-bottom: 20px;
 }
 
-.form-section{
-    max-width: 1024px;
+.form-container{
+    border: 1px solid black;
+    padding: 20px;
+    background-color: antiquewhite;
+    line-height: 1.5em;
 }
 
+#nome-paciente{
+    width: 65%;
+}
+
+.checkboxes{
+    display: flex;
+}
+
+/*
 .form-section{
-    display: block;
+    max-width: 768px;
+    border: 1px solid black;
     margin-bottom: 5px;
     padding: 20px;
-    border: 1px solid black;
 }
 
 .form-section h3{
@@ -38,13 +58,13 @@
 }
 
 .form-section input[type="checkbox"]{
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .form-footer{
     text-align: right;
 }
 
-.form-footer button{
-    padding: 5px;
-}
+.form-container button{
+    padding: 10px;
+} */
